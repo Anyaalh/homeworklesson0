@@ -1,26 +1,53 @@
 import React from 'react';
 import './App.css';
 import Accordion from "./components/Accordion/Accordion";
-import Rating from "./components/Rating/Rating";
-import {PageTitle} from "./components/PageTitle/PageTitle";
 
 function App() {
     console.log("App rendering")
     return (
         <div>
-            <PageTitle title={"This is APP component"}/>
-            <PageTitle title={"My friends"}/>
-            <Accordion titleValue={"Menu"} collapsed={true}/>
-            <Accordion titleValue={"Users"} collapsed={false}/>
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
+            <AppTitle/>
+            <Rating/>
+            <Accordion/>
+            <Rating/>
         </div>
     );
 }
+
+function AppTitle() {
+    console.log("Star rendering")
+    return <>"This is APP component"</>
+}
+
+function hello() {
+    debugger
+    alert("Hello")
+}
+
+//hello()
+
+function Rating() {
+    console.log("Rating rendering")
+    return (
+        <div>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+        </div>
+    )
+}
+
+function Star() {
+    console.log("Star rendering")
+    return (
+        <div>star</div>
+    )
+}
+
+
+
 
 
 export default App;
