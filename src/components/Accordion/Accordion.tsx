@@ -10,6 +10,7 @@ function Accordion() {
     )
 }
 
+
 function AccodionTitle() {
     console.log("AccodionTitle rendering")
     return (
