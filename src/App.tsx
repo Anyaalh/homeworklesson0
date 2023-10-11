@@ -1,48 +1,53 @@
 import React from 'react';
 import './App.css';
+import Accordion from "./components/Accordion/Accordion";
 
 function App() {
-    debugger
+    console.log("App rendering")
     return (
         <div>
-            This is APP component
-            <Rating />
-            <Accordion />
+            <AppTitle/>
+            <Rating/>
+            <Accordion/>
+            <Rating/>
         </div>
     );
 }
 
-function hello(){
+function AppTitle() {
+    console.log("Star rendering")
+    return <>"This is APP component"</>
+}
+
+function hello() {
     debugger
     alert("Hello")
 }
+
 //hello()
 
 function Rating() {
-    debugger
+    console.log("Rating rendering")
     return (
         <div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
         </div>
     )
 }
 
-function Accordion(){
-    debugger
+function Star() {
+    console.log("Star rendering")
     return (
-        <div>
-            <h3>Меню</h3>
-            <ul>
-                <li>1</li>
-                <li>2</li>
-                <li>3</li>
-            </ul>
-        </div>
+        <div>star</div>
     )
 }
+
+
+
+
 
 export default App;
