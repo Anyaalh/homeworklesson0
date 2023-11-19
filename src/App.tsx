@@ -3,6 +3,7 @@ import './App.css';
 import Accordion from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating";
 import {PageTitle} from "./components/PageTitle";
+import {OnnOff} from "./components/OnOff/OnnOff";
 
 function App() {
     console.log("App rendering")
@@ -18,6 +19,8 @@ function App() {
             <Accordion titleValue={"Меню"} collapsed={true}/>
             <Accordion titleValue={"Users"} collapsed={false}/>
             <Rating value={4}/>
+            <OnnOff/>
+            <OnnOff/>
         </div>
     );
 }
