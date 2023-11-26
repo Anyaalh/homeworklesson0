@@ -1,27 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
 
 type AccordionType = {
     titleValue: string
-    collapsed?: boolean
+    // collapsed?: boolean
 }
 
 type AccordionTitleType = {
     title: string
 }
 
-function Accordion(props: AccordionType) {
+
+
+
+
+function UncontrolledAccordion(props: AccordionType) {
     console.log("Accordion rendering")
+    let [collapsed, setCollapsed] = useState(true)
+
 
         return  (
             <div>
                 <AccordionTitle title={props.titleValue}/>
-                { !props.collapsed && <AccordionBody/> }
+                <button onClick={()=>{setCollapsed(!collapsed)}}>TOGGLE</button>
+                { !collapsed && <AccordionBody/> }
             </div>
         )
 }
 
 function AccordionTitle(props: AccordionTitleType) {
-    console.log("AccordionTitle rendering")
+    console.log("AccodionTitle rendering")
     return (
         <h3>{props.title}</h3>
     )
@@ -36,5 +43,5 @@ function AccordionBody() {
     </ul>
 }
 
-export default Accordion;
+export default UncontrolledAccordion;
 
